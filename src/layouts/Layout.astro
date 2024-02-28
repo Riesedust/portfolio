@@ -1,0 +1,50 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+import Header from "../components/Header.astro";
+
+/*colores:
+	fondo: #222831
+	letras: #EEEEEE
+
+
+https://juanarede-portfolio.netlify.app/?#sobremi
+
+https://animated-churros-60739d.netlify.app/#sobre-mi
+
+https://www.figma.com/file/woQY5booqbC9lVpEYb7m81/Portfolio-Website-Design-(Community)?type=design&node-id=1-2&mode=design&t=1IzPyxPpSMkA9Lme-0
+*/
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="my-8 mx-12">
+    <Header />
+    <slot />
+  </body>
+</html>
+
+<style>
+  html {
+    background-color: #222831;
+    color: #eeeeee;
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+</style>

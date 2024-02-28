@@ -1,0 +1,50 @@
+---
+const EXPERIENCE = [
+  {
+    date: "enero 2024 - actualidad",
+    title: "Desarrollador front-end",
+    company: "FisiomFulness",
+    description:
+      "Desarrollo de componentes reutilizables con NextUI y aplicación de los mismos, maquetación de las páginas acorde al diseño dado por el equipo de diseñadores, preparación del front-end para poder conectar el back-end.",
+  },
+  {
+    date: "diciembre 2022 - marzo 2023",
+    title: "Desarrollo full stack freelance",
+    company: "Beauty Rafaela ",
+    description:
+      "Desarrollamos junto a un compañero una aplicación para un SPA permitiendo la correcta gestión de los productos desde el lado administrativo, logrando así que los usuarios puedan visualizarlos y comprarlos mediante Mercado Pago. También se le realizó correcciones y adiciones propuestas por el cliente a la par del mantenimiento mensual del sitio. ",
+  },
+  {
+    date: "mayo 2022 - octubre 2022",
+    title: "Desarrollador front-end",
+    company: "Nanolancer",
+    description:
+      "Realicé diversas tareas para una empresa de desarrolladores freelancer. Entre ellas se destacan el desarrollo de funciones y componentes importantes para el funcionamiento adecuado de los sitios, maquetación web adaptando el diseño dado por el equipo de diseñadores, solucionar errores de funcionamiento y optimización de los proyectos, entre otras cosas",
+  },
+];
+
+const { id } = Astro.props;
+---
+
+<div id={id} class="scroll-m-12">
+  <h1 class="text-3xl font-bold mb-6">Experiencia</h1>
+  <ol class="relative border-s border-gray-200 dark:border-gray-700">
+    {
+      EXPERIENCE.map((e) => (
+        <li class="mb-10 ms-4 max-w-4xl">
+          <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-primary dark:bg-primary" />
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-primary">
+            {e.title}
+          </h3>
+          <h4 class="text-lg font-medium">{e.company}</h4>
+          <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+            {e.date}
+          </time>
+          <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+            {e.description}
+          </p>
+        </li>
+      ))
+    }
+  </ol>
+</div>

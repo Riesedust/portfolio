@@ -1,0 +1,103 @@
+---
+const LOGOS = [
+  {
+    name: "HTML5",
+    logo: "/logos/html5.svg",
+  },
+  {
+    name: "CSS",
+    logo: "/logos/css.svg",
+  },
+  {
+    name: "Javascript",
+    logo: "/logos/javascript.svg",
+  },
+  {
+    name: "Typescript",
+    logo: "/logos/typescript.svg",
+  },
+  {
+    name: "ReactJS",
+    logo: "/logos/react.svg",
+  },
+  {
+    name: "Redux",
+    logo: "/logos/redux.svg",
+  },
+  {
+    name: "NextJS",
+    logo: "/logos/next.svg",
+  },
+  {
+    name: "PostreSQL",
+    logo: "/logos/postgres.svg",
+  },
+  {
+    name: "NodeJS",
+    logo: "/logos/node.svg",
+  },
+  {
+    name: "ExpressJS",
+    logo: "/logos/express.svg",
+  },
+  {
+    name: "Astro",
+    logo: "/logos/astro.svg",
+  },
+  {
+    name: "TailwindCSS",
+    logo: "/logos/tailwind.svg",
+  },
+];
+const { id } = Astro.props;
+---
+
+<div id={id} class="flex scroll-m-12">
+  <section class="flex flex-col w-1/2 gap-y-4">
+    <h1 class="text-3xl font-bold">Sobre mi</h1>
+    <p>
+      ¡Hola! Mi nombre es Luciano Castro, tengo 20 años y soy de Buenos Aires,
+      Argentina
+    </p>
+    <p>
+      Desde que era chico siempre me apasionó la tecnología en general, mi
+      interes sobre el mundo del software fue al rededor de los 10 años,
+      preguntandome como se hacían los videojuegos que jugaba y buscando
+      tutoriales que no entendía en absoluto, pero igualmente miraba porque me
+      despertaba mucha curiosidad.
+    </p>
+    <p>
+      A mediados de mi adolescencia empecé a dar mis primeros pasos en la
+      programación web a través de cursos gratuitos y a los 18 realicé un
+      bootcamp que dio inicio a mi carrera como desarrollador web full stack
+    </p>
+    <p>
+      Llevo casi 2 años enfrentandome a diferentes desafíos y aprendizajes, que
+      han fortalecido mis habilidades técnicas, perfeccionado mi capacidad de
+      comunicación y aprendido a trabajar en equipo hacia objetivos comunes.
+    </p>
+    <p>
+      Me considero una persona autodidacta, responsable y con muchas ganas de
+      emprender nuevos proyectos para continuar desarrollando mi carrera
+      profesional.
+    </p>
+    <p>
+      Actualmente estoy estudiando Ingeniería en Sistemas de información y a la
+      par continúo aprendiendo nuevas tecnologías de forma autodidacta para
+      sumar y complementar las que ya conozco.
+    </p>
+  </section>
+  <section class="flex flex-col gap-y-4 w-1/2">
+    <h1 class="text-3xl font-bold">Tecnologías</h1>
+    <div class="flex flex-wrap justify-center gap-7">
+      {
+        LOGOS.map((e) => (
+          <div class="flex flex-col justify-center items-center">
+            <img alt={e.name} src={e.logo} class="size-[60px]" />
+            <p>{e.name}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</div>

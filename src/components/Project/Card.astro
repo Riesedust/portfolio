@@ -1,0 +1,101 @@
+---
+const PROJECTS = [
+  {
+    name: "App clima",
+    description:
+      "Aplicación simple que devuelve el clima de la ciudad que se ingrese",
+    repo: "https://github.com/Riesedust/Weather-app",
+    web: "https://weather-app-riesedust.vercel.app/",
+    img: "/projects/clima.jpeg",
+    tech: [
+      {
+        name: "React",
+        icon: "/logos/react.svg",
+        class: "bg-sky-800",
+      },
+      {
+        name: "TailwindCSS",
+        icon: "/logos/tailwind.svg",
+        class: "bg-sky-900",
+      },
+    ],
+  },
+  {
+    name: "Beauty Rafaela",
+    description:
+      "E-commerce de una tienda de cosmética y spa hecha para una cliente freelance",
+    repo: "",
+    web: "http://www.beautyrafaela.com.ar",
+    img: "/projects/beauty.jpeg",
+    tech: [
+      {
+        name: "React",
+        icon: "/logos/react.svg",
+        class: "bg-sky-800",
+      },
+      {
+        name: "NodeJS",
+        icon: "/logos/node.svg",
+        class: "bg-sky-900",
+      },
+      {
+        name: "TailwindCSS",
+        icon: "/logos/tailwind.svg",
+        class: "bg-sky-900",
+      },
+    ],
+  },
+];
+---
+
+<div class="flex flex-wrap gap-4">
+  {
+    PROJECTS.map((e) => (
+      <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl dark:border-gray-700 dark:bg-gray-800">
+        <img
+          class="object-cover w-fit h-full rounded-t-lg md:w-1/2  md:rounded-none md:rounded-s-lg"
+          src={e.img}
+          alt={e.name}
+        />
+        <div class="flex flex-col justify-between p-4 leading-normal">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            {e.name}
+          </h5>
+          <section class="flex flex-wrap gap-3">
+            {e.tech.map((tech) => (
+              <div
+                class={`flex w-fit justify-center px-3 py-1 gap-2 text-sm font-medium text-white rounded-2xl ${tech.class}`}
+              >
+                <img src={tech.icon} class="size-5" />
+                <p>{tech.name}</p>
+              </div>
+            ))}
+          </section>
+          <p class="my-3 font-normal text-gray-700 dark:text-gray-400">
+            {e.description}
+          </p>
+          <section>
+            {e.repo && (
+              <a
+                href={e.repo}
+                class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-4 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                target="_blank"
+              >
+                Repo
+              </a>
+            )}
+            {e.web && (
+              <a
+                href={e.web}
+                class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-4 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                target="_blank"
+              >
+                Web
+              </a>
+            )}
+          </section>
+        </div>
+      </div>
+    ))
+  }
+</div>
