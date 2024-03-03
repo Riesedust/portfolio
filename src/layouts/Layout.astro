@@ -29,7 +29,7 @@ https://www.figma.com/file/woQY5booqbC9lVpEYb7m81/Portfolio-Website-Design-(Comm
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="my-8 mx-12">
+  <body class="mb-8 mx-12">
     <Header />
     <slot />
   </body>
@@ -37,7 +37,13 @@ https://www.figma.com/file/woQY5booqbC9lVpEYb7m81/Portfolio-Website-Design-(Comm
 
 <style>
   html {
-    background-color: #222831;
+    background: rgb(18, 23, 21);
+    background: linear-gradient(
+      180deg,
+      rgba(18, 23, 21, 1) 0%,
+      rgba(34, 40, 49, 1) 62%
+    );
+    background-attachment: fixed;
     color: #eeeeee;
     scroll-behavior: smooth;
   }

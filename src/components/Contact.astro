@@ -2,11 +2,36 @@
 const { id } = Astro.props;
 ---
 
-<div id={id} class="flex flex-col justify-center items-center scroll-m-12">
-  <h1>Contactame</h1>
-  <section class="flex gap-x-8">
-    <p>icono linkedin</p>
-    <p>icono wsp</p>
-    <p>icono mail</p>
+<div
+  id={id}
+  class="flex flex-col justify-center items-center scroll-m-12 gap-y-3"
+>
+  <h1 class="text-3xl font-bold">¡Contactame!</h1>
+  <section
+    class="flex flex-col gap-y-4 min-[450px]:gap-x-8 min-[450px]:flex-row"
+  >
+    <a
+      href="mailto:lucianoadrielcastro@gmail.com"
+      class="inline-flex w-36 justify-evenly items-center px-4 py-2 text-sm font-medium border rounded-lg focus:z-10 focus:ring-4 focus:outline-non focus:text-blue-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700 focus:ring-gray-700"
+    >
+      <img src="/logos/email.svg" alt="Icono email" />
+      <p>Email</p>
+    </a>
+    <a
+      href="https://www.linkedin.com/in/luciano-adriel-castro/"
+      target="_blank"
+      class="inline-flex w-36 justify-evenly items-center px-4 py-2 text-sm font-medium border rounded-lg focus:z-10 focus:ring-4 focus:outline-non focus:text-blue-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700 focus:ring-gray-700"
+    >
+      <img src="/logos/linkedin.svg" alt="Icono linkedin" />
+      <p>LinkedIn</p>
+    </a>
+    <a
+      href="https://wa.me/543489569730"
+      target="_blank"
+      class="inline-flex w-36 justify-evenly items-center px-4 py-2 text-sm font-medium border rounded-lg focus:z-10 focus:ring-4 focus:outline-non focus:text-blue-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700 focus:ring-gray-700"
+    >
+      <img src="/logos/wsp.svg" alt="Icono whatsapp" />
+      <p>WhatsApp</p>
+    </a>
   </section>
 </div>

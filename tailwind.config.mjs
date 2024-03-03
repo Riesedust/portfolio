@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         primary: "#7aebd8",
+        navcolor: "rgba(34, 40, 49, 0.9)",
       },
     },
   },

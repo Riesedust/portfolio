@@ -1,6 +1,45 @@
 ---
 const PROJECTS = [
   {
+    name: "Beauty Rafaela",
+    description:
+      "E-commerce de una tienda de cosmética y spa hecha para una cliente freelance",
+    repo: "",
+    web: "http://www.beautyrafaela.com.ar",
+    img: "/projects/beauty.jpeg",
+    tech: [
+      {
+        name: "React",
+        icon: "/logos/react.svg",
+        class: "bg-sky-800",
+      },
+      {
+        name: "NodeJS",
+        icon: "/logos/node.svg",
+        class: "bg-green-900",
+      },
+      {
+        name: "TailwindCSS",
+        icon: "/logos/tailwind.svg",
+        class: "bg-sky-900",
+      },
+    ],
+  },
+  {
+    name: "Mazenod",
+    description: "Página dinámica para un colegio",
+    repo: "",
+    web: "https://mazenod.rilow.technology/",
+    img: "/projects/mazenod.jpeg",
+    tech: [
+      {
+        name: "React",
+        icon: "/logos/react.svg",
+        class: "bg-sky-800",
+      },
+    ],
+  },
+  {
     name: "App clima",
     description:
       "Aplicación simple que devuelve el clima de la ciudad que se ingrese",
@@ -20,45 +59,20 @@ const PROJECTS = [
       },
     ],
   },
-  {
-    name: "Beauty Rafaela",
-    description:
-      "E-commerce de una tienda de cosmética y spa hecha para una cliente freelance",
-    repo: "",
-    web: "http://www.beautyrafaela.com.ar",
-    img: "/projects/beauty.jpeg",
-    tech: [
-      {
-        name: "React",
-        icon: "/logos/react.svg",
-        class: "bg-sky-800",
-      },
-      {
-        name: "NodeJS",
-        icon: "/logos/node.svg",
-        class: "bg-sky-900",
-      },
-      {
-        name: "TailwindCSS",
-        icon: "/logos/tailwind.svg",
-        class: "bg-sky-900",
-      },
-    ],
-  },
 ];
 ---
 
-<div class="flex flex-wrap gap-4">
+<div class="flex flex-col gap-4 md:grid md:flex-none md:grid-cols-2">
   {
     PROJECTS.map((e) => (
-      <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl dark:border-gray-700 dark:bg-gray-800">
+      <div class="flex flex-col items-start border rounded-lg shadow md:items-center md:flex-row md:max-w-xl border-gray-700 bg-gray-800">
         <img
-          class="object-cover w-fit h-full rounded-t-lg md:w-1/2  md:rounded-none md:rounded-s-lg"
+          class="object-cover w-fit h-full rounded-t-lg md:w-1/2 md:rounded-none md:rounded-s-lg"
           src={e.img}
           alt={e.name}
         />
         <div class="flex flex-col justify-between p-4 leading-normal">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
             {e.name}
           </h5>
           <section class="flex flex-wrap gap-3">
@@ -71,14 +85,12 @@ const PROJECTS = [
               </div>
             ))}
           </section>
-          <p class="my-3 font-normal text-gray-700 dark:text-gray-400">
-            {e.description}
-          </p>
+          <p class="my-3 font-normal text-gray-400">{e.description}</p>
           <section>
             {e.repo && (
               <a
                 href={e.repo}
-                class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-4 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                class="border focus:outline-none focus:ring-4 font-medium rounded-full text-sm px-4 py-2 me-2 mb-2 bg-gray-800 text-white border-gray-600 hover:bg-gray-700 hover:border-gray-600 focus:ring-gray-700"
                 target="_blank"
               >
                 Repo
@@ -87,7 +99,7 @@ const PROJECTS = [
             {e.web && (
               <a
                 href={e.web}
-                class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-4 py-2 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                class="border focus:outline-none focus:ring-4 font-medium rounded-full text-sm px-4 py-2 me-2 mb-2 bg-gray-800 text-white border-gray-600 hover:bg-gray-700 hover:border-gray-600 focus:ring-gray-700"
                 target="_blank"
               >
                 Web

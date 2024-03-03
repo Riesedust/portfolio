@@ -52,9 +52,9 @@ const LOGOS = [
 const { id } = Astro.props;
 ---
 
-<div id={id} class="flex scroll-m-12">
-  <section class="flex flex-col w-1/2 gap-y-4">
-    <h1 class="text-3xl font-bold">Sobre mi</h1>
+<div id={id} class="flex flex-col scroll-m-16 gap-y-5 md:gap-y-0 md:flex-row">
+  <section class="flex flex-col w-full gap-y-4 md:w-1/2">
+    <h1 class="text-2xl font-bold md:text-3xl">Sobre mi</h1>
     <p>
       ¡Hola! Mi nombre es Luciano Castro, tengo 20 años y soy de Buenos Aires,
       Argentina
@@ -87,13 +87,13 @@ const { id } = Astro.props;
       sumar y complementar las que ya conozco.
     </p>
   </section>
-  <section class="flex flex-col gap-y-4 w-1/2">
+  <section class="flex flex-col gap-y-4 w-full md:w-1/2">
     <h1 class="text-3xl font-bold">Tecnologías</h1>
     <div class="flex flex-wrap justify-center gap-7">
       {
         LOGOS.map((e) => (
           <div class="flex flex-col justify-center items-center">
-            <img alt={e.name} src={e.logo} class="size-[60px]" />
+            <img alt={e.name} src={e.logo} class="size-[40px] md:size-[60px]" />
             <p>{e.name}</p>
           </div>
         ))
