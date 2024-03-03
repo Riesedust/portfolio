@@ -7,9 +7,7 @@ const { id } = Astro.props;
   class="flex flex-col justify-center items-center scroll-m-12 gap-y-3"
 >
   <h1 class="text-3xl font-bold">¡Contactame!</h1>
-  <section
-    class="flex flex-col gap-y-4 min-[450px]:gap-x-8 min-[450px]:flex-row"
-  >
+  <section class="grid grid-cols-2 gap-5 md:flex md:flex-row">
     <a
       href="mailto:lucianoadrielcastro@gmail.com"
       class="inline-flex w-36 justify-evenly items-center px-4 py-2 text-sm font-medium border rounded-lg focus:z-10 focus:ring-4 focus:outline-non focus:text-blue-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700 focus:ring-gray-700"
@@ -32,6 +30,14 @@ const { id } = Astro.props;
     >
       <img src="/logos/wsp.svg" alt="Icono whatsapp" />
       <p>WhatsApp</p>
+    </a>
+    <a
+      href="https://github.com/Riesedust"
+      target="_blank"
+      class="inline-flex w-36 justify-evenly items-center px-4 py-2 text-sm font-medium border rounded-lg focus:z-10 focus:ring-4 focus:outline-non focus:text-blue-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700 focus:ring-gray-700"
+    >
+      <img src="/logos/github.svg" alt="Icono github" />
+      <p>GitHub</p>
     </a>
   </section>
 </div>
